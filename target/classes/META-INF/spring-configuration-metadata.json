@@ -1,0 +1,167 @@
+{
+  "groups": [
+    {
+      "name": "spring.rocker",
+      "type": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.rocker.add-as-sources",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.rocker.add-as-test-sources",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.allow-request-override",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.allow-session-override",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.class-directory",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.content-type",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": "text\/html; charset=utf-8"
+    },
+    {
+      "name": "spring.rocker.discard-logic-whitespace",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.rocker.expose-request-attributes",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.expose-session-attributes",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.expose-spring-macro-helpers",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.rocker.extends-class",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.extends-model-class",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.fail-on-error",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.rocker.java-version",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": "1.8"
+    },
+    {
+      "name": "spring.rocker.optimize",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.output-directory",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": "classpath:\/templates\/"
+    },
+    {
+      "name": "spring.rocker.reloading",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.rocker.skip",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.skip-touch",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.rocker.suffix",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": ".rocker.html"
+    },
+    {
+      "name": "spring.rocker.suffix-regex",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.target-charset",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": "UTF-8"
+    },
+    {
+      "name": "spring.rocker.template-directory",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    },
+    {
+      "name": "spring.rocker.template-resolver-order",
+      "type": "java.lang.Integer",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "spring.rocker.touch-file",
+      "type": "java.lang.String",
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+    }
+  ],
+  "hints": []
+}

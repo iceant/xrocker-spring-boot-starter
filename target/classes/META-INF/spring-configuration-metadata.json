@@ -149,7 +149,8 @@
     {
       "name": "spring.rocker.template-directory",
       "type": "java.lang.String",
-      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties"
+      "sourceType": "com.github.iceant.xrocker.spring.boot.starter.RockerProperties",
+      "defaultValue": "src\/main\/resources\/templates"
     },
     {
       "name": "spring.rocker.template-resolver-order",

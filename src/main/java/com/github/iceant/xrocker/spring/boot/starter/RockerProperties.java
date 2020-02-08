@@ -8,7 +8,7 @@ public class RockerProperties {
 
     //////////////////////////////////////////////////////////////////////////
     //// 编译属性
-    private String templateDirectory;
+    private String templateDirectory="src/main/resources/templates";
     private String outputDirectory;
     private String classDirectory;
     private boolean failOnError = true;

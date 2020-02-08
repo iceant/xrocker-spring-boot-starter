@@ -547,6 +547,16 @@ public class $ implements ApplicationContextAware {
 
     //////////////////////////////////////////////////////////////////////////
     ////
+    public boolean hasAnyRole(String ... roles){
+        HttpServletRequest request = request();
+        for(String role : roles){
+            if(request().isUserInRole(role)) return true;
+        }
+        return false;
+    }
+
+    //////////////////////////////////////////////////////////////////////
+    ////
     public static BindableRockerModel template(String templatePath){
         RockerBootstrap rockerBootstrap = (RockerBootstrap) getBean(RockerBootstrap.class);
         if(rockerBootstrap==null) return null;

@@ -26,7 +26,7 @@ public class RockerView extends AbstractTemplateView {
 
     @Override
     protected void renderMergedTemplateModel(Map<String, Object> map, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-        RockerModel model = rockerBootstrap.model(viewName);
+        RockerModel model = rockerBootstrap.model(properties.getPrefix()+viewName+properties.getSuffix());
         BindableRockerModel bindableRockerModel = new BindableRockerModel(viewName, model.getClass().getCanonicalName(), model);
 
         // -------------------------------------------------------------------

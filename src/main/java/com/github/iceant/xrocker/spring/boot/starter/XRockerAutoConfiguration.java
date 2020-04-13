@@ -9,7 +9,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.PostConstruct;
 
 @Configuration
 @ConditionalOnClass(RockerBootstrap.class)
@@ -17,9 +16,12 @@ import javax.annotation.PostConstruct;
 @EnableConfigurationProperties(RockerProperties.class)
 public class XRockerAutoConfiguration {
     final RockerProperties properties;
+    final ApplicationContext applicationContext;
 
-    public XRockerAutoConfiguration(RockerProperties properties) {
+    public XRockerAutoConfiguration(RockerProperties properties, ApplicationContext applicationContext) {
         this.properties = properties;
+        this.applicationContext = applicationContext;
+        rocker.$.setApplicationContextManually(applicationContext);
     }
 
 
@@ -39,8 +41,4 @@ public class XRockerAutoConfiguration {
         return viewResolver;
     }
 
-    @PostConstruct
-    public void rockerViewUtil(ApplicationContext applicationContext){
-        rocker.$.setApplicationContextManually(applicationContext);
-    }
 }

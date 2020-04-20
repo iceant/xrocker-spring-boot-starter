@@ -8,6 +8,7 @@ import com.fizzed.rocker.compiler.RockerConfiguration;
 import com.fizzed.rocker.compiler.RockerOptions;
 import com.fizzed.rocker.compiler.TokenException;
 import com.fizzed.rocker.reload.ReloadingRockerBootstrap;
+import com.fizzed.rocker.runtime.DefaultRockerBootstrap;
 import com.fizzed.rocker.runtime.DefaultRockerModel;
 import com.fizzed.rocker.runtime.DefaultRockerTemplate;
 import com.fizzed.rocker.runtime.RockerBootstrap;
@@ -16,7 +17,7 @@ import java.io.File;
 
 public class SpringReloadingRockerBootstrap implements RockerBootstrap {
     private RockerProperties properties;
-    private ReloadingRockerBootstrap rockerBootstrap;
+    private RockerBootstrap rockerBootstrap;
 
     private RockerConfiguration makeConfiguration(RockerProperties properties){
         RockerConfiguration configuration = new RockerConfiguration();
@@ -44,6 +45,7 @@ public class SpringReloadingRockerBootstrap implements RockerBootstrap {
         } catch (TokenException e) {
             e.printStackTrace();
         }
+
         configuration.setOptions(options);
         return configuration;
     }
@@ -51,7 +53,11 @@ public class SpringReloadingRockerBootstrap implements RockerBootstrap {
 
     public SpringReloadingRockerBootstrap(RockerProperties properties) {
         this.properties = properties;
-        rockerBootstrap = new ReloadingRockerBootstrap(makeConfiguration(properties));
+        if(properties.isReloading()) {
+            rockerBootstrap = new ReloadingRockerBootstrap(makeConfiguration(properties));
+        }else{
+            rockerBootstrap=new DefaultRockerBootstrap();
+        }
     }
 
     @Override

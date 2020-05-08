@@ -24,6 +24,7 @@ public class RockerProperties {
     private boolean discardLogicWhitespace = false;
     private String targetCharset = "UTF-8";
     private String suffixRegex;
+    private String postProcessing;
 
     //////////////////////////////////////////////////////////////////////////
     //// 运行属性
@@ -259,6 +260,14 @@ public class RockerProperties {
         this.allowSessionOverride = allowSessionOverride;
     }
 
+    public String getPostProcessing() {
+        return postProcessing;
+    }
+
+    public void setPostProcessing(String postProcessing) {
+        this.postProcessing = postProcessing;
+    }
+
     public RockerProperties clone(){
         RockerProperties properties = new RockerProperties();
         properties = new RockerProperties();
@@ -289,6 +298,7 @@ public class RockerProperties {
         properties.setTemplateDirectory(getTemplateDirectory());
         properties.setTemplateResolverOrder(getTemplateResolverOrder());
         properties.setTouchFile(getTouchFile());
+        properties.setPostProcessing(getPostProcessing());
         return properties;
     }
 }

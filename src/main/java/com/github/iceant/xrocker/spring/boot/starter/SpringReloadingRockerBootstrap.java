@@ -46,6 +46,10 @@ public class SpringReloadingRockerBootstrap implements RockerBootstrap {
             e.printStackTrace();
         }
 
+        if(properties.getPostProcessing()!=null && properties.getPostProcessing().length()>0){
+            options.setPostProcessing(properties.getPostProcessing().split(","));
+        }
+
         configuration.setOptions(options);
         return configuration;
     }

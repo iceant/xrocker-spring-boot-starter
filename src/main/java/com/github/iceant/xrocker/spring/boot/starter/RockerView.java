@@ -19,7 +19,7 @@ public class RockerView extends AbstractTemplateView {
     private RockerProperties properties;
 
     public RockerView(String viewName, RockerBootstrap rockerBootstrap, RockerProperties properties) {
-        this.viewName = viewName + properties.getSuffix();
+        this.viewName = viewName;
         this.rockerBootstrap = rockerBootstrap;
         this.properties = properties;
     }
